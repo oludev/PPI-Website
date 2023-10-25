@@ -101,6 +101,7 @@ h6,
 .service-item {
     height: 500px;
     background: $light;
+    color: $dark;
     transition: .5s;
     opacity: 0.9;
 }
@@ -300,8 +301,4 @@ h6,
 
 .services-bg{
     background: $secondary;
-}
-
-.service-item-h{
-    background: linear-gradient(44, 210, 95);
 }

@@ -9307,6 +9307,7 @@ h6,
 .service-item {
   height: 500px;
   background: #F4F5F8;
+  color: #222429;
   transition: 0.5s;
   opacity: 0.9;
 }
@@ -9494,8 +9495,4 @@ h6,
 
 .services-bg {
   background: #CCCCCC;
-}
-
-.service-item-h {
-  background: linear-gradient(44, 210, 95);
 }/*# sourceMappingURL=style.css.map */
