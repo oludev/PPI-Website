@@ -159,6 +159,7 @@ a {
 a:hover {
   color: #2cd25f;
   text-decoration: underline;
+  transition: ease-in-out 0.8s;
 }
 
 a:not([href]):not([class]) {
