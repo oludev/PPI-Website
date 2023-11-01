@@ -256,7 +256,7 @@ span.blink-class{
     transition: .5s;
     opacity: 0.9;
     line-height: 2;
-    min-height: 750px;
+    min-height: 600px;
 }
 
    
@@ -274,6 +274,11 @@ span.blink-class{
     transition: .5s;
     opacity: 0.9;
 }
+
+.service-item-h{
+    min-height: 500px;
+}
+
 
 // .service-item:hover h4 {
 //     color: $light;
@@ -324,17 +329,7 @@ span.blink-class{
 }
 
 
-@media (min-width: 360px) and (max-width: 767.98px){
-    .service-item-h{
-        height: 1200px!important;
-    }
-}
-
-
-@media (max-width: 277.98px) and (max-width: 575.98px){
-
-
-    
+@media (max-width: 277.98px) and (max-width: 575.98px){    
     .p-4{
         display: flex;
         flex-direction: row!important;
@@ -363,8 +358,6 @@ span.blink-class{
     .contact-form .px-sm-1 .py-sm-1{
         padding: 2px!important;
     }
-
- 
 }
 
 
@@ -390,8 +383,6 @@ span.blink-class{
     .brief-order .order-sm-4, .services-order .order-sm-4{
         order: 4;
     }
-    
-
 }
 
 @media (max-width: 991.98px) {
@@ -421,11 +412,6 @@ span.blink-class{
         margin: 0;
         align-items: center;
     }
-
-    .service-item-h {
-        height: 700px;
-    } 
-    
 }
 
 // Example
@@ -437,12 +423,10 @@ span.blink-class{
 
 
 .service-item-h {
-    height: 750px;
     display: inline-flex;
     flex-direction: column;
     flex-shrink: 50%;
 }
-
 }
 
 

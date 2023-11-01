@@ -9265,27 +9265,27 @@ a.text-dark:hover, a.text-dark:focus {
   transform-origin: -4vmin center;
 }
 .background span:nth-child(1) {
-  background: #2CD25F;
+  background: teal;
   animation-delay: -0.5s;
   opacity: 0;
 }
 .background span:nth-child(2) {
-  background: #2CD25F;
+  background: #686A6F;
   animation-delay: -1s;
   opacity: 0;
 }
 .background span:nth-child(3) {
-  background: #2CD25F;
+  background: #686A6F;
   animation-delay: -1.5s;
   opacity: 0;
 }
 .background span:nth-child(4) {
-  background: teal;
+  background: #2CD25F;
   animation-delay: -2s;
   opacity: 0;
 }
 .background span:nth-child(5) {
-  background: #686A6F;
+  background: #2CD25F;
   animation-delay: -2.5s;
   opacity: 0;
 }
@@ -9473,7 +9473,7 @@ span.blink-class {
   transition: 0.5s;
   opacity: 0.9;
   line-height: 2;
-  min-height: 750px;
+  min-height: 600px;
 }
 
 .service-item h4 {
@@ -9485,6 +9485,10 @@ span.blink-class {
   background: #F4F5F8;
   transition: 0.5s;
   opacity: 0.9;
+}
+
+.service-item-h {
+  min-height: 500px;
 }
 
 .portfolio-h {
@@ -9530,11 +9534,6 @@ span.blink-class {
   margin-bottom: 0;
 }
 
-@media (min-width: 360px) and (max-width: 767.98px) {
-  .service-item-h {
-    height: 1200px !important;
-  }
-}
 @media (max-width: 277.98px) and (max-width: 575.98px) {
   .p-4 {
     display: flex;
@@ -9601,16 +9600,12 @@ span.blink-class {
     margin: 0;
     align-items: center;
   }
-  .service-item-h {
-    height: 700px;
-  }
 }
 @media (min-width: 992px) and (max-width: 1400px) {
   .counter-bar {
     margin-top: -8rem;
   }
   .service-item-h {
-    height: 750px;
     display: inline-flex;
     flex-direction: column;
     flex-shrink: 50%;
