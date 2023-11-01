@@ -9232,6 +9232,122 @@ a.text-dark:hover, a.text-dark:focus {
     border-color: #dee2e6;
   }
 }
+/*******Loader********/
+.loader {
+  display: grid;
+  place-items: center;
+}
+
+#myDiv {
+  display: none;
+  text-align: center;
+}
+
+.background {
+  width: 100vw;
+  height: 100vh;
+  background: #FFFFFF;
+  --amount: 20;
+}
+
+.background span {
+  width: 8vmin;
+  height: 8vmin;
+  border-radius: 4vmin;
+  backface-visibility: hidden;
+  position: absolute;
+  animation-name: move;
+  animation-timing-function: cubic-bezier(0.4, 0, 1, 0.8);
+  animation-iteration-count: infinite;
+  animation-duration: 3s;
+  top: calc(50% - 4vmin);
+  left: 50%;
+  transform-origin: -4vmin center;
+}
+.background span:nth-child(1) {
+  background: #2CD25F;
+  animation-delay: -0.5s;
+  opacity: 0;
+}
+.background span:nth-child(2) {
+  background: #2CD25F;
+  animation-delay: -1s;
+  opacity: 0;
+}
+.background span:nth-child(3) {
+  background: #2CD25F;
+  animation-delay: -1.5s;
+  opacity: 0;
+}
+.background span:nth-child(4) {
+  background: teal;
+  animation-delay: -2s;
+  opacity: 0;
+}
+.background span:nth-child(5) {
+  background: #686A6F;
+  animation-delay: -2.5s;
+  opacity: 0;
+}
+.background span:nth-child(6) {
+  background: teal;
+  animation-delay: -3s;
+  opacity: 0;
+}
+
+@keyframes move {
+  0% {
+    transform: scale(1) rotate(0deg) translate3d(0, 0, 1px);
+  }
+  30% {
+    opacity: 1;
+  }
+  100% {
+    z-index: 10;
+    transform: scale(0) rotate(360deg) translate3d(0, 0, 1px);
+  }
+}
+/* Dark theme  */
+@media (prefers-color-scheme: dark) {
+  :root {
+    --bg: hsl(var(--hue),10%,10%);
+    --fg: hsl(var(--hue),10%,90%);
+  }
+}
+/* Animation */
+@keyframes ring {
+  from {
+    stroke-dasharray: 0 257 0 0 1 0 0 258;
+  }
+  25% {
+    stroke-dasharray: 0 0 0 0 257 0 258 0;
+  }
+  50%, to {
+    stroke-dasharray: 0 0 0 0 0 515 0 0;
+  }
+}
+@keyframes ball {
+  from, 50% {
+    animation-timing-function: ease-in;
+    stroke-dashoffset: 1;
+  }
+  64% {
+    animation-timing-function: ease-in;
+    stroke-dashoffset: -109;
+  }
+  78% {
+    animation-timing-function: ease-in;
+    stroke-dashoffset: -145;
+  }
+  92% {
+    animation-timing-function: ease-in;
+    stroke-dashoffset: -157;
+  }
+  57%, 71%, 85%, 99%, to {
+    animation-timing-function: ease-out;
+    stroke-dashoffset: -163;
+  }
+}
 /********** Template CSS ************/
 h1,
 h2,
@@ -9262,8 +9378,8 @@ h1.underline:after {
   height: 5px;
   background-color: #2CD25F;
   position: absolute;
-  margin-left: 50%;
-  margin-right: 50%;
+  margin-left: 45%;
+  margin-right: 45%;
 }
 
 h1.about-underline {
@@ -9277,9 +9393,34 @@ h1.about-underline:after {
   height: 5px;
   background-color: #2CD25F;
   position: absolute;
-  left: 25%;
+  margin-left: 45%;
+  margin-right: 45%;
 }
 
+span.ball {
+  display: inline-flex;
+  width: 30px;
+  height: 30px;
+  background-color: lawngreen;
+  z-index: 9999;
+  border-radius: 50%;
+}
+
+span.blink-class {
+  animation: blink 1s linear infinite;
+}
+
+@keyframes blink {
+  25% {
+    opacity: 0.5;
+  }
+  50% {
+    opacity: 0;
+  }
+  75% {
+    opacity: 0.5;
+  }
+}
 .btn-square {
   width: 36px;
   height: 36px;
@@ -9323,6 +9464,7 @@ h1.about-underline:after {
 .navbar-light .navbar-nav .nav-link:hover,
 .navbar-light .navbar-nav .nav-link.active {
   color: #2CD25F;
+  transition: transform 0.25s ease-out;
 }
 
 .service-item {
@@ -9331,10 +9473,7 @@ h1.about-underline:after {
   transition: 0.5s;
   opacity: 0.9;
   line-height: 2;
-}
-
-.service-edit {
-  height: 350px !important;
+  min-height: 750px;
 }
 
 .service-item h4 {
@@ -9346,6 +9485,10 @@ h1.about-underline:after {
   background: #F4F5F8;
   transition: 0.5s;
   opacity: 0.9;
+}
+
+.portfolio-h {
+  min-height: 600px;
 }
 
 .portfolio-item .portfolio-btn {
@@ -9387,12 +9530,12 @@ h1.about-underline:after {
   margin-bottom: 0;
 }
 
-@media (max-width: 575.98px) {
+@media (min-width: 360px) and (max-width: 767.98px) {
   .service-item-h {
-    height: 750px;
-    display: flex;
-    flex-direction: column;
+    height: 1200px !important;
   }
+}
+@media (max-width: 277.98px) and (max-width: 575.98px) {
   .p-4 {
     display: flex;
     flex-direction: row !important;
@@ -9404,6 +9547,18 @@ h1.about-underline:after {
     margin-top: 5rem;
     display: flex;
   }
+  div.header-img img.header-img-content {
+    display: none !important;
+  }
+  .brief-order .order-sm-3, .services-order .order-sm-3 {
+    order: 3;
+  }
+  .brief-order .order-sm-4, .services-order .order-sm-4 {
+    order: 4;
+  }
+  .contact-form .px-sm-1 .py-sm-1 {
+    padding: 2px !important;
+  }
 }
 @media (max-width: 767.98px) {
   .counter-bar {
@@ -9411,9 +9566,17 @@ h1.about-underline:after {
     display: flex;
   }
   .service-item-h {
-    height: 500px;
     display: flex;
     flex-direction: column;
+  }
+  div.header-img img.header-img-content {
+    display: none !important;
+  }
+  .brief-order .order-sm-3, .services-order .order-sm-4 {
+    order: 3;
+  }
+  .brief-order .order-sm-4, .services-order .order-sm-4 {
+    order: 4;
   }
 }
 @media (max-width: 991.98px) {

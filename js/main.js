@@ -1,6 +1,18 @@
 (function ($) {
     "use strict";
-    
+
+  //Loader
+//   var myVar;
+        
+//   function myFunction() {
+//     myVar = setTimeout(showPage, 2000);
+//   }
+  
+//   function showPage() {
+//     document.getElementById("loader").style.display = "none";
+//     document.getElementById("myDiv").style.display = "block";
+//   }
+
     // Dropdown on mouse hover
     $(document).ready(function () {
         function toggleNavbarMethod() {
@@ -17,6 +29,9 @@
         toggleNavbarMethod();
         $(window).resize(toggleNavbarMethod);
     });
+
+//Loader
+
     
     //Counter
     (function ($) {
