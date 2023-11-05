@@ -20,110 +20,110 @@ $enable-responsive-font-sizes: true;
 
 
 /*******Loader********/
-.loader{
-    display: grid;
-	place-items: center;
-}
+// .loader{
+//     display: grid;
+// 	place-items: center;
+// }
 
-#myDiv {
-    display: none;
-    text-align: center;
-  }
+// #myDiv {
+//     display: none;
+//     text-align: center;
+//   }
 
 
-.background {
-    width: 100vw;
-    height: 100vh;
-    background: #FFFFFF;
-    --amount: 20;
-  }
+// .background {
+//     width: 100vw;
+//     height: 100vh;
+//     background: #FFFFFF;
+//     --amount: 20;
+//   }
   
-  $animationDuration: 3s;
-  $amount: 6;
-  $particleRadius: 4vmin;
-  .background span {
-    width: $particleRadius * 2;
-    height: $particleRadius * 2;
-    border-radius: $particleRadius;
-    backface-visibility: hidden;
-    position: absolute;
-    animation-name: move;
-    animation-timing-function: cubic-bezier(0.4, 0, 1, 0.8);
-    animation-iteration-count: infinite;
-    animation-duration: $animationDuration;
-    top: calc(50% - #{$particleRadius});
-    left: 50%;
-    transform-origin: ($particleRadius*-1) center;
+//   $animationDuration: 3s;
+//   $amount: 6;
+//   $particleRadius: 4vmin;
+//   .background span {
+//     width: $particleRadius * 2;
+//     height: $particleRadius * 2;
+//     border-radius: $particleRadius;
+//     backface-visibility: hidden;
+//     position: absolute;
+//     animation-name: move;
+//     animation-timing-function: cubic-bezier(0.4, 0, 1, 0.8);
+//     animation-iteration-count: infinite;
+//     animation-duration: $animationDuration;
+//     top: calc(50% - #{$particleRadius});
+//     left: 50%;
+//     transform-origin: ($particleRadius*-1) center;
   
-    $colors: (
-        teal,
-       #2CD25F,
-      #686A6F
-    );
+//     $colors: (
+//         teal,
+//        #2CD25F,
+//       #686A6F
+//     );
     
-  @for $i from 1 through $amount {
-      &:nth-child(#{$i}) {
-        background: nth($colors, random(length($colors)));
-        animation-delay: ($i / $amount) * $animationDuration * -1;
-        opacity: 0;
-      }
-    }
-  }
+//   @for $i from 1 through $amount {
+//       &:nth-child(#{$i}) {
+//         background: nth($colors, random(length($colors)));
+//         animation-delay: ($i / $amount) * $animationDuration * -1;
+//         opacity: 0;
+//       }
+//     }
+//   }
   
-  @keyframes move {
-    0% {
-      transform: scale(1) rotate(0deg) translate3d(0, 0, 1px);
-    }
-    30% {
-      opacity: 1;
-    }
-    100% {
-      z-index: 10;
-      transform: scale(0) rotate(360deg) translate3d(0, 0, 1px);
-    }
-  }
+//   @keyframes move {
+//     0% {
+//       transform: scale(1) rotate(0deg) translate3d(0, 0, 1px);
+//     }
+//     30% {
+//       opacity: 1;
+//     }
+//     100% {
+//       z-index: 10;
+//       transform: scale(0) rotate(360deg) translate3d(0, 0, 1px);
+//     }
+//   }
 /* Dark theme  */
-@media (prefers-color-scheme: dark) {
-	:root {
-		--bg: hsl(var(--hue),10%,10%);
-		--fg: hsl(var(--hue),10%,90%);
-	}
-}
+// @media (prefers-color-scheme: dark) {
+// 	:root {
+// 		--bg: hsl(var(--hue),10%,10%);
+// 		--fg: hsl(var(--hue),10%,90%);
+// 	}
+// }
 
-/* Animation */
-@keyframes ring {
-	from {
-		stroke-dasharray: 0 257 0 0 1 0 0 258;
-	}
-	25% {
-		stroke-dasharray: 0 0 0 0 257 0 258 0;
-	}
-	50%, to {
-		stroke-dasharray: 0 0 0 0 0 515 0 0;
-	}
-}
-@keyframes ball {
-	from, 50% {
-		animation-timing-function: ease-in;
-		stroke-dashoffset: 1;
-	}
-	64% {
-		animation-timing-function: ease-in;
-		stroke-dashoffset: -109;
-	}
-	78% {
-		animation-timing-function: ease-in;
-		stroke-dashoffset: -145;
-	}
-	92% {
-		animation-timing-function: ease-in;
-		stroke-dashoffset: -157;
-	}
-	57%, 71%, 85%, 99%, to {
-		animation-timing-function: ease-out;
-		stroke-dashoffset: -163;
-	}
-}
+// /* Animation */
+// @keyframes ring {
+// 	from {
+// 		stroke-dasharray: 0 257 0 0 1 0 0 258;
+// 	}
+// 	25% {
+// 		stroke-dasharray: 0 0 0 0 257 0 258 0;
+// 	}
+// 	50%, to {
+// 		stroke-dasharray: 0 0 0 0 0 515 0 0;
+// 	}
+// }
+// @keyframes ball {
+// 	from, 50% {
+// 		animation-timing-function: ease-in;
+// 		stroke-dashoffset: 1;
+// 	}
+// 	64% {
+// 		animation-timing-function: ease-in;
+// 		stroke-dashoffset: -109;
+// 	}
+// 	78% {
+// 		animation-timing-function: ease-in;
+// 		stroke-dashoffset: -145;
+// 	}
+// 	92% {
+// 		animation-timing-function: ease-in;
+// 		stroke-dashoffset: -157;
+// 	}
+// 	57%, 71%, 85%, 99%, to {
+// 		animation-timing-function: ease-out;
+// 		stroke-dashoffset: -163;
+// 	}
+// }
 
 /********** Template CSS ************/
 h1,
@@ -358,6 +358,7 @@ span.blink-class{
     .contact-form .px-sm-1 .py-sm-1{
         padding: 2px!important;
     }
+
 }
 
 
@@ -383,6 +384,8 @@ span.blink-class{
     .brief-order .order-sm-4, .services-order .order-sm-4{
         order: 4;
     }
+
+
 }
 
 @media (max-width: 991.98px) {
@@ -412,6 +415,7 @@ span.blink-class{
         margin: 0;
         align-items: center;
     }
+
 }
 
 // Example
