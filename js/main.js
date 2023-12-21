@@ -64,19 +64,19 @@
     
     $("div:nth-child(1) .counter").count({
         startValue: 0,
-        endValue: 500,
+        endValue: 256,
       durationValue: 4000
     });
     $("div:nth-child(2) .counter-2").count({
         startValue: 500,
-        endValue: 1500,
+        endValue: 1438,
         durationValue: 6000
     });
-    $("div:nth-child(3) .counter-3").count({
-        startValue: 1500,
-        endValue: 1000000,
-        durationValue: 8000
-    });
+    // $("div:nth-child(3) .counter-3").count({
+    //     startValue: 1500,
+    //     endValue: 1011000,
+    //     durationValue: 8000
+    // });
     
     // Back to top button
     $(window).scroll(function () {
